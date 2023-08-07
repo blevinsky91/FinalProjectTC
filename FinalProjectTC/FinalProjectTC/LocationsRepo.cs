@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Dapper;
 using FinalProjectTC.Models;
 
 namespace FinalProjectTC
@@ -15,8 +16,20 @@ namespace FinalProjectTC
 
         public IEnumerable<Locations> GetAllLocations()
         {
-            throw new NotImplementedException();
+            return _conn.Query<Locations>();
         }
+
+        public IEnumerable<License> GetLicenses()
+        {
+            return _conn.Query<License>();
+        }
+
+        public IEnumerable<Network> GetNetworks()
+        {
+            return _conn.Query<Network>();
+        }
+    }
+
     }
 }
 
