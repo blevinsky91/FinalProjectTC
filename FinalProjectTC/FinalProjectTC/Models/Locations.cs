@@ -3,12 +3,11 @@ namespace FinalProjectTC.Models
 {
 	public class Locations
 	{
-		public string Name { get; set; }
-		public string City { get; set; }
-		public decimal Coords { get; set; }
-		public string FreeBikes { get; set; }
-		public string EmptySlots { get; set; }
+        public string city { get; set; }
+        public string country { get; set; }
+        public double latitude { get; set; }
+        public double longitude { get; set; }
 
-	}
+    }
 }
 
