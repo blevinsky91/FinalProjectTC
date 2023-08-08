@@ -8,7 +8,7 @@ namespace FinalProjectTC
 {
     public class CityBikeAPI
     {
-        public static void CallBikeAPI()
+        public static Root CallBikeAPI()
         {
             HttpClient client = new HttpClient(); //client
 
@@ -19,24 +19,26 @@ namespace FinalProjectTC
 
             Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse); //converting string into object
 
-            
+            return networksResponse;
+
+        
             Console.WriteLine("Here are the Names and Locations of the CityBikes in the United States! : ");
             Console.WriteLine();
 
-            foreach (Network network in networksResponse.networks) //iterating through List of networks
+            foreach (Network network in networksResponse.Networks) //iterating through List of networks
             {
 
-                if (network.location.country == "US")
+                if (network.Location.Country == "US")
                 {
 
-                    if (network.location.country == "US")
+                    if (network.Location.Country == "US")
                     {
 
-                        Console.WriteLine(network.name);
-                        Console.WriteLine(network.location.city);
+                        Console.WriteLine(network.Name);
+                        Console.WriteLine(network.Location.City);
 
                     }
-                    if (network.ebikes == true)
+                    if (network.Ebikes == true)
                     {
                         Console.WriteLine("There are E-Bikes available at this location!");
                     }

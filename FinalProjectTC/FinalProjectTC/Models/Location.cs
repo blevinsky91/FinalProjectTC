@@ -3,10 +3,10 @@ namespace FinalProjectTC.Models
 {
 	public class Location
 	{
-        public string city { get; set; }
-        public string country { get; set; }
-        public double latitude { get; set; }
-        public double longitude { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
     }
 }
 

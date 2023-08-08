@@ -3,15 +3,15 @@ namespace FinalProjectTC.Models
 {
 	public class Network
 	{
-        public object company { get; set; }
-        public string href { get; set; }
-        public string id { get; set; }
-        public Location location { get; set; }
-        public string name { get; set; }
-        public string source { get; set; }
-        public string gbfs_href { get; set; }
-        public License license { get; set; }
-        public bool? ebikes { get; set; }
+        public object Company { get; set; }
+        public string Href { get; set; }
+        public string Id { get; set; }
+        public Location Location { get; set; }
+        public string Name { get; set; }
+        public string Source { get; set; }
+        public string Gbfs_href { get; set; }
+        public License License { get; set; }
+        public bool? Ebikes { get; set; }
     }
 }
 
