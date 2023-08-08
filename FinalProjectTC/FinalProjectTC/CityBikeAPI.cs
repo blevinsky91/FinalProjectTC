@@ -16,7 +16,6 @@ namespace FinalProjectTC
 
             string jsonResponse = client.GetStringAsync(apiUrl).Result; //calling endpoint with client
 
-
             Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse); //converting string into object
 
             return networksResponse;
