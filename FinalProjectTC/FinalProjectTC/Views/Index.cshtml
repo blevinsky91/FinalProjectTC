@@ -10,18 +10,20 @@
 <h2>Names and Locations in the United States</h2>
 <table class="table">
     <tr>
+        <th>Company</th>
         <th>Name</th>
         <th>Location</th>
         <th>Website</th>
-        <th>E-bikes available?</th>
+        <th>E-Bike Availability</th>
     </tr>
 
     @foreach (var item in @Model)
     {
         <tr>
+            <td>@item.company</td>
             <td>@item.name</td>
             <td>@item.location</td>
-            <td>@item.gbfs_href</td>
+            <td>@item.source</td>
             <td>@item.ebikes</td>
         </tr>
     }

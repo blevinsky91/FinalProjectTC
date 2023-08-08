@@ -27,15 +27,17 @@ namespace FinalProjectTC
             foreach (Network network in networksResponse.networks) //iterating through List of networks
             {
 
-                if (network.location.country == "US") //if the country is Italy
+                if (network.location.country == "US") //Locations in USA
                 {
-
+                    Console.WriteLine(network.company);
+                    Console.WriteLine();
                     Console.WriteLine(network.name);
+                    Console.WriteLine();
                     Console.WriteLine(network.location.city);
-                    Console.WriteLine(network.gbfs_href);
+                    Console.WriteLine();
+                    Console.WriteLine(network.source);
+                    Console.WriteLine();
 
-                    
-                    
                 }
                 if (network.ebikes == true)
                 {
