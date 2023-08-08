@@ -20,12 +20,12 @@ namespace FinalProjectTC
                     if (response.IsSuccessStatusCode)
                     {
                         string jsonResponse = await response.Content.ReadAsStringAsync();
-                        Network networksResponse = JsonConvert.DeserializeObject<Network>(jsonResponse);
+                        Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse);
 
                         
-                        foreach (Network network in networksResponse.networks)
+                        foreach (Network item in networksResponse.Networks)
                         {
-                            Console.WriteLine($"ID: {network.id}, Name: {network.name}, Company: {network.company}, Location: {network.location}");
+                            Console.WriteLine($"ID: {item.Id}, Name: {item.Name}, Company: {item.Company}, Location: {item.Location}");
                             
                         }
                     }

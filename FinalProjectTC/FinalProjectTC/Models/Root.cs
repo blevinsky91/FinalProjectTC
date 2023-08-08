@@ -3,7 +3,7 @@ namespace FinalProjectTC.Models
 {
 	public class Root
 	{
-        public List<Network> networks { get; set; } 
+        public List<Network> Networks { get; set; } 
     }
 }
 

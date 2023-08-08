@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model IEnumerable<Locations>
+
+<h2>Locations</h2>
+<table class="table">
+    <tr>
+        <th>City</th>
+        <th>Country</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+    </tr>
+
+    @foreach (var item in @Model)
+    {
+        <tr>
+            <td>@item.City</td>
+            <td>@item.Country</td>
+            <td>@item.Latitude</td>
+            <td>@item.Longitude</td>
+        </tr>
+    }
+
+</table>
