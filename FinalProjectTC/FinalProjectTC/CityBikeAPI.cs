@@ -19,8 +19,7 @@ namespace FinalProjectTC
 
             Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse); //converting string into object
 
-            //Console.WriteLine(networksResponse.networks[0].location);
-
+            
             Console.WriteLine("Here are the Names and Locations of the CityBikes in the United States! : ");
             Console.WriteLine();
 
@@ -29,15 +28,10 @@ namespace FinalProjectTC
 
                 if (network.location.country == "US") //Locations in USA
                 {
-                    Console.WriteLine(network.company);
-                    Console.WriteLine();
+                    
                     Console.WriteLine(network.name);
-                    Console.WriteLine();
                     Console.WriteLine(network.location.city);
-                    Console.WriteLine();
-                    Console.WriteLine(network.source);
-                    Console.WriteLine();
-
+                
                 }
                 if (network.ebikes == true)
                 {
@@ -49,8 +43,7 @@ namespace FinalProjectTC
                 }
 
                 Console.WriteLine();
-                
-
+                Console.WriteLine();
 
             }
 
