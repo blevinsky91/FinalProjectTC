@@ -26,24 +26,30 @@ namespace FinalProjectTC
             foreach (Network network in networksResponse.networks) //iterating through List of networks
             {
 
-                if (network.location.country == "US") //Locations in USA
+                if (network.location.country == "US")
                 {
-                    
-                    Console.WriteLine(network.name);
-                    Console.WriteLine(network.location.city);
-                
-                }
-                if (network.ebikes == true)
-                {
-                    Console.WriteLine("There are E-Bikes available at this location!");
-                }
-                else
-                {
-                    Console.WriteLine("Sorry, there are no E-Bikes available at this location");
-                }
 
-                Console.WriteLine();
-                Console.WriteLine();
+                    if (network.location.country == "US")
+                    {
+
+                        Console.WriteLine(network.name);
+                        Console.WriteLine(network.location.city);
+
+                    }
+                    if (network.ebikes == true)
+                    {
+                        Console.WriteLine("There are E-Bikes available at this location!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, there are no E-Bikes available at this location");
+                    }
+
+                    Console.WriteLine();
+                    Console.WriteLine();
+
+
+                }
 
             }
 
