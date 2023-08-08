@@ -6,42 +6,54 @@ using Newtonsoft.Json;
 
 namespace FinalProjectTC
 {
-	public class CityBikeAPI
-	{
-	    static async Task Main()
+    public class CityBikeAPI
+    {
+        public static void CallBikeAPI()
         {
-            try
+            HttpClient client = new HttpClient(); //client
+
+            string apiUrl = "http://api.citybik.es/v2/networks"; //endpoint
+
+            string jsonResponse = client.GetStringAsync(apiUrl).Result; //calling endpoint with client
+
+
+            Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse); //converting string into object
+
+            //Console.WriteLine(networksResponse.networks[0].location);
+
+            Console.WriteLine("Here are the Names and Locations of the CityBikes in the United States! : ");
+            Console.WriteLine();
+
+            foreach (Network network in networksResponse.networks) //iterating through List of networks
             {
-                using (HttpClient client = new HttpClient())
+
+                if (network.location.country == "US") //if the country is Italy
                 {
-                    string apiUrl = "http://api.citybik.es/v2/networks";
-                    HttpResponseMessage response = await client.GetAsync(apiUrl);
 
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string jsonResponse = await response.Content.ReadAsStringAsync();
-                        Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse);
+                    Console.WriteLine(network.name);
+                    Console.WriteLine(network.location.city);
+                    Console.WriteLine(network.gbfs_href);
 
-                        
-                        foreach (Network item in networksResponse.Networks)
-                        {
-                            Console.WriteLine($"ID: {item.Id}, Name: {item.Name}, Company: {item.Company}, Location: {item.Location}");
-                            
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"API request failed with status code: {response.StatusCode}");
-                    }
+                    
+                    
                 }
+                if (network.ebikes == true)
+                {
+                    Console.WriteLine("There are E-Bikes available at this location!");
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, there are no E-Bikes available at this location");
+                }
+
+                Console.WriteLine();
+                
+
+
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
+
         }
+
     }
-
 }
-
 

@@ -5,24 +5,24 @@
 }
 
 
-@model IEnumerable<Locations>
+@model IEnumerable<Network>
 
-<h2>Locations</h2>
+<h2>Names and Locations in the United States</h2>
 <table class="table">
     <tr>
-        <th>City</th>
-        <th>Country</th>
-        <th>Latitude</th>
-        <th>Longitude</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Website</th>
+        <th>E-bikes available?</th>
     </tr>
 
     @foreach (var item in @Model)
     {
         <tr>
-            <td>@item.City</td>
-            <td>@item.Country</td>
-            <td>@item.Latitude</td>
-            <td>@item.Longitude</td>
+            <td>@item.name</td>
+            <td>@item.location</td>
+            <td>@item.gbfs_href</td>
+            <td>@item.ebikes</td>
         </tr>
     }
 
