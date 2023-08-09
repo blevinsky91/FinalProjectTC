@@ -8,8 +8,9 @@ namespace FinalProjectTC
 {
     public class CityBikeAPI
     {
-        public static Root CallBikeAPI()
+        public static List<Network> CallBikeAPI()
         {
+
             HttpClient client = new HttpClient(); //client
 
             string apiUrl = "http://api.citybik.es/v2/networks"; //endpoint
@@ -18,9 +19,10 @@ namespace FinalProjectTC
 
             Root networksResponse = JsonConvert.DeserializeObject<Root>(jsonResponse); //converting string into object
 
-            return networksResponse;
-
+            return networksResponse.Networks;
         
+    
+
             Console.WriteLine("Here are the Names and Locations of the CityBikes in the United States! : ");
             Console.WriteLine();
 
