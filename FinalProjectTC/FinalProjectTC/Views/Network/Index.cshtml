@@ -7,21 +7,15 @@
 
 @model List<Network>
 
-<h1>CityBike Locations in the United States</h1>
-<table class="table">
-    <tr>
-        <th>Name</th>
-        <th>Location</th>
-        <th>E-Bike Availability</th>
-    </tr>
-
-   @foreach (var item in @Model)
-    {
-        <tr>
-            <td>@item.Name</td>
-            <td>@item.Location</td>
-            <td>@item.Ebikes</td>
-        </tr>
-    }
-
-</table>
+<body>
+    <div class="grid-container">
+        @foreach (var item in Model)
+{
+                <div class="flex-box">
+                    <h1 class="text">@item.Name</h1>
+                    <h2 class="text">@item.Location</h2>
+                    <h2 class="text">@item.Ebikes</h2>
+                </div>
+}
+    </div>
+</body>
