@@ -10,12 +10,15 @@
 <body>
     <div class="grid-container">
         @foreach (var item in Model)
-{
+            {
+                if (item == "US")
+                {
                 <div class="flex-box">
                     <h1 class="text">@item.Name</h1>
                     <h2 class="text">@item.Location</h2>
                     <h2 class="text">@item.Ebikes</h2>
                 </div>
-}
+                }
+            }
     </div>
 </body>
