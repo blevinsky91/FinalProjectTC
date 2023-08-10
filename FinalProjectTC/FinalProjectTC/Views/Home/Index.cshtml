@@ -15,7 +15,7 @@
             background-attachment: fixed;
             height: 100vh;
             display: flex;
-            font-family: inria-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
@@ -23,19 +23,19 @@
 <div class="text-center">
     <h1 class="display-4" style="color: red">Welcome to CityBikes Finder</h1>
     <h3 class="display-4" style="color: grey">Here you can find any CityBikes provider in the world!</h3>
-    <p style="color: white">Please select a country from the list to find a CityBikes location near you</p>
+    <p style="color: green">Please select a country from the list to find a CityBikes location near you</p>
 </div>
 
 @using (Html.BeginForm("Index", "Network", "Post"))
     {
-        <div>
+        <div style="text-align-last: center">
             <label for="country">Choose a Country:</label>
             <select id="country" name="country">
                 <option value="United States">United States</option>
                 <option value="Italy">Italy</option>
             </select>
         </div>
-    <button type="submit" style="display: inline-block">Submit</button>
+    <button type="submit" style="text-align-last: center">Submit</button>
     }
 
 
