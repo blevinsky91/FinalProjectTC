@@ -18,29 +18,36 @@
     <p>Please select a state from the list to find a CityBikes location near you!</p>
 </div>
 
-<label for="states">Choose a State:</label>
-<select id="states" name="states">
-    <option value="Califonia">California</option>
-    <option value="Colorado">Colorado</option>
-    <option value="DC">DC</option>
-    <option value="Florida">Florida</option>
-    <option value="Georgia">Georgia</option>
-    <option value="Illinois">Illinois</option>
-    <option value="Indiana">Indiana</option>
-    <option value="Iowa">Iowa</option>
-    <option value="Massachusetts">Massachusetts</option>
-    <option value="Minnesota">Minnesota</option>
-    <option value="Nebraska">Nebraska</option>
-    <option value="Nevada">Nevada</option>
-    <option value="New York">New York</option>
-    <option value="North Carolina">North Carolina</option>
-    <option value="Ohio">Ohio</option>
-    <option value="Oklahoma">Oklahoma</option>
-    <option value="Oregon">Oregon</option>
-    <option value="Pennsylvania">Pennsylvania</option>
-    <option value="South Carolina">South Carolina</option>
-    <option value="Tennessee">Tennessee</option>
-    <option value="Texas">Texas</option>
-    <option value="Wisconsin">Wisconsin</option>
-</select>
+@using (Html.BeginForm("Index", "NetworkController", "Post"))
+    {
+        <div>
+            <label for="states">Choose a State:</label>
+            <select id="states" name="states">
+                <option value="Califonia">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="DC">DC</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Wisconsin">Wisconsin</option>
+            </select>
+        </div>
+    <button type="submit">Submit</button>
+    }
+
 
