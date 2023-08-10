@@ -20,6 +20,8 @@ namespace FinalProjectTC.Controllers
             return View(networksResponse);
 
         }
+
+        
     }
 }
 
