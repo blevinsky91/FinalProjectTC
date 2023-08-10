@@ -15,6 +15,8 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             height: 100vh;
+            display: flex;
+            font-family: cursive;
         }
     </style>
 </head>
@@ -26,14 +28,14 @@
             {
                 <div class="flex-box" style="border: double">
                     <h1 class="text" style="color: red">@item.Name</h1>
-                    <h2 class="text" style="color: navy">@item.Location.City</h2>
+                    <h2 class="text" style="color: white">@item.Location.City</h2>
                     @if (item.Ebikes == true)
                         {
-                    <h2 style="color: white">There are E-Bikes available at this location!</h2>
+                    <h2 style="color: blue">There are E-Bikes available at this location!</h2>
                         }
                      else
                         {
-                    <h2 style="color:white">Sorry, there are no E-Bikes available at this location.</h2>
+                    <h2 style="color: blue">Sorry, there are no E-Bikes available at this location.</h2>
                      }
                 </div>
             }
