@@ -6,16 +6,22 @@
 
 
 @model List<Network>
-
+<head>
+    <style>
+        body {
+            background-image: url(https://c8.alamy.com/comp/2BX43PA/blank-outline-map-of-united-states-of-america-simplified-vector-map-made-of-thick-black-outline-on-white-background-2BX43PA.jpg);
+        }
+    </style>
+</head>
 <body>
     <div class="grid-container">
         @foreach (var item in Model)
         {
             @if (item.Location.Country == "US")
             {
-                <div class="flex-box">
-                    <h1 class="text">@item.Name</h1>
-                    <h2 class="text">@item.Location.City</h2>
+                <div class="flex-box" style="border: double">
+                    <h1 class="text" style="color: red">@item.Name</h1>
+                    <h2 class="text" style="color: navy">@item.Location.City</h2>
                     @if (item.Ebikes == true)
                         {
                     <h2>There are E-Bikes available at this location!</h2>
