@@ -8,18 +8,18 @@
 <head class="main">
     <style>
         body {
-            background-image: url(https://grist.org/wp-content/uploads/2020/03/gettyimages-1179212574-e1584114897219.jpg)
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
+            background-image: url(https://grist.org/wp-content/uploads/2020/03/gettyimages-1179212574-e1584114897219.jpg);
+            background-size: cover; /* This scales the image to cover the entire element */
+            background-position: center; /* This positions the image in the center */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
         }
     </style>
 </head>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to CityBikes Finder</h1>
-    <h3 class="display-4">Here you can find any CityBikes provider in the world!</h3>
-    <p>Please select a country from the list to find a CityBikes location near you</p>
+    <h1 class="display-4" style="color: white">Welcome to CityBikes Finder</h1>
+    <h3 class="display-4" style="color: white">Here you can find any CityBikes provider in the world!</h3>
+    <p style="color: white">Please select a country from the list to find a CityBikes location near you</p>
 </div>
 
 @using (Html.BeginForm("Index", "Network", "Post"))
