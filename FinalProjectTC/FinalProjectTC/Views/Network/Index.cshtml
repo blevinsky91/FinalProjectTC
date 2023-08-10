@@ -15,13 +15,13 @@
             {
                 <div class="flex-box">
                     <h1 class="text">@item.Name</h1>
-                    <h2 class="text">@item.Location</h2>
+                    <h2 class="text">@item.Location.City</h2>
                     @if (item.Ebikes == true)
-                    {
+                        {
                     <h2>There are E-Bikes available at this location!</h2>
-                    }
+                        }
                      else
-                     {
+                        {
                     <h2>Sorry, there are no E-Bikes available at this location.</h2>
                      }
                 </div>
