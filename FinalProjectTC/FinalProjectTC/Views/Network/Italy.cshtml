@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Network>
+<head>
+    <style>
+        body {
+            background-image: url(https://static.vecteezy.com/system/resources/previews/006/580/125/original/map-of-italy-on-black-background-vector.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            font-family: cursive;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        @foreach (var item in Model)
+        {
+            @if (item.Location.Country == "IT")
+            {
+                <div class="flex-box" style="border: double">
+                    <h1 class="text" style="color: darkgreen">@item.Name</h1>
+                    <h2 class="text" style="color: white">@item.Location.City</h2>
+                    @if (item.Ebikes == true)
+                    {
+                        <h2 style="color: magenta">There are E-Bikes available at this location!</h2>
+                    }
+                    else
+                    {
+                        <h2 style="color: red">Sorry, there are no E-Bikes available at this location.</h2>
+                    }
+                </div>
+            }
+        }
+    </div>
+
+    <a href="/Home/Index">Go to Home</a>
+</body>
