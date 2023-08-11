@@ -17,7 +17,15 @@
             height: 100vh;
             display: flex;
             font-family: cursive;
-            font-size: small;
+        }
+        #name {
+            font-size: xx-large;
+        }
+        #city {
+            font-size: large;
+        }
+        #ebikes {
+            font-size: large;
         }
     </style>
 </head>
@@ -28,15 +36,15 @@
             @if (item.Location.Country == "US")
             {
                 <div class="flex-box" style="border: double">
-                    <h1 class="text" style="color: darkred">@item.Name</h1>
-                    <h2 class="text" style="color: white">@item.Location.City</h2>
+                    <h1 class="text" id="name" style="color: darkred">@item.Name</h1>
+                    <h2 class="text" id ="city" style="color: white">@item.Location.City</h2>
                     @if (item.Ebikes == true)
                         {
-                    <h2 style="color: darkorange">There are E-Bikes available at this location!</h2>
+                    <h2 style="color: darkorange" id="ebikes">There are E-Bikes available at this location!</h2>
                         }
                      else
                         {
-                    <h2 style="color: blue">Sorry, there are no E-Bikes available at this location.</h2>
+                    <h2 style="color: blue" id="ebikes">Sorry, there are no E-Bikes available at this location.</h2>
                      }
                 </div>
              }
