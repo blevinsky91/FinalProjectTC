@@ -31,6 +31,7 @@
 </head>
 <body>
     <div class="grid-container">
+        
         @foreach (var item in Model)
         {
             @if (item.Location.Country == "US")
@@ -46,6 +47,7 @@
                         {
                     <h2 style="color: blue" id="ebikes">Sorry, there are no E-Bikes available at this location.</h2>
                      }
+                    
                 </div>
              }
            
