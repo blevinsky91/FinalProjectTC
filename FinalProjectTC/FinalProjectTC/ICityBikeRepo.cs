@@ -1,12 +1,12 @@
-﻿using System;
-using FinalProjectTC.Models;
-using Newtonsoft.Json;
+﻿//using System;
+//using FinalProjectTC.Models;
+//using Newtonsoft.Json;
 
-namespace FinalProjectTC
-{
-	public interface ICityBikeRepo 
-	{
-        public void CallBikeAPI();  
-    }
-}
+//namespace FinalProjectTC
+//{
+//	public interface ICityBikeRepo 
+//	{
+//        public List<Network> CallBikeAPI();  
+//    }
+//}
 
